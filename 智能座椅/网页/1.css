@@ -1,0 +1,57 @@
+/*顶部板块*/
+	.top {
+		height: 100px;
+		background-color: rgb(128, 225, 241);
+		width: 100%;
+		margin: 0 auto;  /*上下间距为0，左右自动调节*/
+	}
+    /*顶部板块内部*/
+	.top_inner {
+		height: 40px;
+		width: 1200px;
+		margin: 0 auto;
+	}
+	/*初始化列表的属性*/
+	ul{
+	    list-style-type:none;
+	}
+
+    li {
+        float:left;
+        margin-left:20px;
+    }
+    /*初始化banner模块*/
+	.banner {
+		height: 80px;
+		width: 1200px;
+		background-color: rgb(119, 163, 245);
+		margin: 0 auto;
+	}
+
+	.main {
+		height: 400px;
+		width: 1200px;
+		margin: 0 auto;
+		background-color: red;
+	}
+
+	.m_l {
+		width: 400px;
+		height: 400px;
+		background-color: aqua;
+		float: left;
+	}
+
+	.m_r {
+		width: 400px;
+		height: 400px;
+		background-color: rgb(68, 129, 129);
+		float: right;
+	}
+
+	.bottom {
+		height: 40px;
+		width: 1200px;
+		background-color: rgb(128, 225, 241);
+		margin: 0 auto;
+	}

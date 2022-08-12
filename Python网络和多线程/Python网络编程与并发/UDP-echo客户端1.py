@@ -1,0 +1,31 @@
+#coding=gbk
+from socket import *
+#1、客户端可以发送多条 2、客户端如果发送一个'exit'则客户端退出 3、服务器端收到什么就返回什么
+
+# 创建一个UDP协议的套接字，然后发送一条数据到网络上的另一个进程
+
+#1、创建套接字
+client_socket=socket(AF_INET,SOCK_DGRAM)
+
+#定义变量，是否退出客户端的标记
+flag=True
+
+# 2、定义一个接受消息的目标,8080是一个目标服务器的端口，127.0.0.1是目标服务器地址
+server_host_port = ('192.168.112.127', 8093)
+
+while flag:
+    #3、准备发送数据，encode表示按照一种编码格式把数据变成字节数组bytes
+    #数据一定是字节数据才能发送
+    datas=input('请输入:').encode('utf-8')
+
+    #4、发送数据,标识一个进程是通过IP+端口+协议
+    client_socket.sendto(datas,server_host_port)
+
+    #一定可以从服务器接收到放回过来的数据，打印服务器打印的数据
+    print("返回的数据是:",client_socket.recvfrom(1024)[0].decode('utf-8'))
+
+    if datas.decode('utf-8')=='exit':
+        flag=False
+
+#5、关闭套接字，其实就是释放了系统资源
+client_socket.close()

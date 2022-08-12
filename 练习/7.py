@@ -1,0 +1,3 @@
+# coding=gbk
+while True:
+    input('Ëæ±ãÊä')

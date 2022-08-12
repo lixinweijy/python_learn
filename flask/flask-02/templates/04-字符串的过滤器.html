@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>字符串的过滤器</title>
+</head>
+<body>
+{# 当变量数据没有传入，可以给变量设置默认值 #}
+<p> {{name | default('这个人很懒，什么都没有留下！')}}</p><br>
+{# 字符串的大小写转换 #}
+<p>{{"xyz" | lower}}</p><br>
+<!--反转-->
+<p>{{"hello lxw" | reverse}}</p>
+
+<p>{{"今天是%d号，天气%s"|format(17,"下雨")}}</p>
+
+<!--关闭html的自动转义-->
+<p>{{"<em>name</em>"|safe}}</p>
+
+</body>
+</html>

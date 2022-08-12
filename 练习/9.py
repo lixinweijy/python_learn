@@ -1,0 +1,4 @@
+#coding=gbk
+a="¿Ó"
+b="la"
+print(a+b)

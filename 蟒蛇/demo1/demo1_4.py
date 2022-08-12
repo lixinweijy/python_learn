@@ -1,0 +1,8 @@
+a=input('请输入金额:')
+b=input('请输入姓名:')
+print('微信支付凭证')
+print('您的姓名是:\n',b)
+print(' 付款金额')
+print('        $',a)
+print('收款方  BP')
+print('交易状态  支付成功，对方已收款')

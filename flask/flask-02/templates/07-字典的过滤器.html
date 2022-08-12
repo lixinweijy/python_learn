@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>字符串的过滤器</title>
+</head>
+<body>
+<!--定义一个students的字典变量-->
+{%  set students=[
+    {"name":"zhangsan","age":13,"gender":"女"},
+    {"name":"lisi","age":44,"gender":"男"},
+    {"name":"wangwu","age":65,"gender":"女"}
+]
+%}
+
+<!--根据学生的年龄排序-->
+<ul>
+    {% for stu in students | sort(attribute='age',reverse=false)%}
+        <li>{{stu.name}},{{stu.age}}</li>
+    {% endfor %}
+</ul>
+
+<!--上面的数据分组，每组变成一个子列表-->
+<ul>
+    {% for group in students | groupby("gender") %}
+        <li>{{group.grouper}}</li>
+        {% for stu in group.list %}
+            <li>{{stu.name}}.{{stu.gender}}</li>
+        {% endfor %}
+    {% endfor %}
+</ul>
+
+<!--取出字典中的某列，组成一个大的列表，然后再把列表变成字符串-->
+<p>{{students | map(attribute='name') | join("-")}}</p><br>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>父模板</title>
+</head>
+<body>
+{% block temp1 %}
+    <p>页面的头部</p><br>
+<hr>
+
+{% endblock %}
+<p>父模板中间内容</p>
+
+{% block temp2 %}
+
+<hr>
+ <p>页面的尾部</p><br>
+{% endblock %}
+</body>
+</html>

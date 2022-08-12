@@ -1,0 +1,5 @@
+{'id': '100', 'name': '22', 'English': 33, 'Python': 33, 'Java': 33}
+{'id': '1002', 'name': '44', 'English': 22, 'Python': 33, 'Java': 22}
+{'id': '55', 'name': '3552', 'English': 33, 'Python': 33, 'Java': 33}
+{'id': '1003', 'name': 'sss', 'English': '12', 'Python': '32', 'Java': '46'}
+{'id': '2222', 'name': '张天宇', 'English': 100, 'Python': 100, 'Java': 100}

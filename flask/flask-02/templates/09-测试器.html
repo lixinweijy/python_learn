@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试器</title>
+</head>
+<body>
+<!--检查变量是否被定义，也可以用undefined检查是否未被定义-->
+{% if name is defined %}
+    <p>name is :{{name}}</p>
+{% endif %}
+
+<!--检查变量是否被定义-->
+{% if name is undefined %}
+    <p>name 未被定义</p>
+{% endif %}
+
+<!--检查是否所有字符都是大写-->
+{% if name is upper %}
+    <h2>"{{name}}" are all upper case.</h2>
+{% endif %}
+
+<!--检查变量是否未空-->
+{% if name is none %}
+    <h2>Variable is none.</h2>
+{% endif %}
+
+<!--检查变量是否为字符串，也可以用number检查是否为数值-->
+{% if name is string %}
+    <h2>{{name}} is a string.</h2>
+{% endif %}
+
+<!--检查变量是否为偶数,也可以用odd检查是否未奇数-->
+{% if 2 is even %}
+    <h2>Variable is an even number.</h2>
+{% endif %}
+
+<!--检查变量是否为可迭代对象，也可以用sequence检查是否是序列-->
+{% if [1,2,3] is iterable %}
+    <h2>Variable is iterable.</h2>
+{% endif %}
+
+<!--检查变量是否为字典-->
+{% if {"1":"2"} is mapping %}
+    <h2>Variable is dict.</h2>
+{% endif %}
+
+<!--检查变量是否为手机号-->
+{% if '102103902' is is_phone %}
+    <p>是手机号</p>
+{% else %}
+    <p>不是手机号</p>
+{% endif %}
+
+<!--检查变量是否为手机号-->
+{% if 'hello' is start_with('he') %}
+    <p>当前字符串是以he开头</p>
+{% else %}
+    <p>当前字符串不是以he开头</p>
+{% endif %}
+</body>
+</html>

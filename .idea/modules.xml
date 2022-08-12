@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../it/msb/JavaScript/.idea/JavaScript.iml" filepath="$PROJECT_DIR$/../it/msb/JavaScript/.idea/JavaScript.iml" />
+      <module fileurl="file://$PROJECT_DIR$/flask框架/flask_01/.idea/flask_01.iml" filepath="$PROJECT_DIR$/flask框架/flask_01/.idea/flask_01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../it/.idea/it.iml" filepath="$PROJECT_DIR$/../it/.idea/it.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/key.iml" filepath="$PROJECT_DIR$/.idea/key.iml" />
+    </modules>
+  </component>
+</project>

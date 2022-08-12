@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>字符串的过滤器</title>
+</head>
+<body>
+<!--定义一个numbers的列表变量-->
+{% set numbers=[3,1,4,1,5,9]%}
+<p> {{ numbers | first }}</p>
+
+<p> {{ numbers | length }}</p>
+
+<p> {{ numbers | sum }}</p>
+
+<p> {{ numbers | sort }}</p>
+
+<p> {{ numbers | join("-") }}</p>
+</body>
+</html>

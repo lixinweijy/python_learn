@@ -1,0 +1,71 @@
+# -*- coding:utf-8 -*-
+import turtle as t
+t.bgcolor('black')
+t.setup(900,600)
+t.tracer(0)#直接显示
+t1=t.Pen()
+t2=t.Pen()
+t2.speed(0)
+t1.hideturtle()
+t2.hideturtle()
+
+#画小按键
+def anjian(x,y,z):
+    t1.setheading(0)
+    t1.penup()
+    t1.goto(x-10,y)#任意去一个地方
+    t1.pendown()
+    t1.color('black','pink')
+    t1.begin_fill()
+    for i in range(4):
+        t1.fd(35)
+        t1.circle(10,90)
+    t1.fd(35)
+    t1.end_fill()
+    t1.setheading(90)
+    t1.penup()
+    t1.fd(8)#向上走
+    t1.setheading(180)
+    t1.fd(27)#向左走
+    t1.setheading(0)
+    t1.pendown()
+    t1.write(z,font=('华文彩云',25))#z——数字
+    t1.penup()
+    t1.goto(x,y)#回到原来的位置
+
+#画外面的白框
+t2.penup()
+t2.setheading(0)
+t2.pensize(10)
+t2.pencolor('white')
+t2.goto(-170,150)
+t2.pendown()
+t2.fd(300)
+t2.right(90)
+t2.fd(300)
+t2.right(90)
+t2.fd(300)
+t2.right(90)
+t2.fd(300)
+#第一行
+anjian(-140,85,'1')
+anjian(-65,85,'2')
+anjian(10,85,'3')
+anjian(85,85,'A')
+#第二行
+anjian(-140,10,'4')
+anjian(-65,10,'5')
+anjian(10,10,'6')
+anjian(85,10,'B')
+#第三行
+anjian(-140,-65,'7')
+anjian(-65,-65,'8')
+anjian(10,-65,'9')
+anjian(85,-65,'C')
+#第四行
+anjian(-140,-140,'*')
+anjian(-65,-140,'0')
+anjian(10,-140,'#')
+anjian(85,-140,'D')
+t.update()
+t.done()
